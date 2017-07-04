@@ -3,8 +3,15 @@ class BankAccount
   @@interest_rate = 0.01
   @@accounts = []
 
-  attr_reader :balance
-  attr_writer :balance
+  def balance
+    return @balance
+  end
+
+  def balance=(x)
+    @balance = x
+  end
+
+  # attr_accessor :balance
 
   def initialize
     @balance = 0
@@ -33,7 +40,12 @@ class BankAccount
 
   def self.interest_time
     @@accounts.each do |a|
-    a.balance *= (@@interest_rate + 1)
+    # a.balance *= (@@interest_rate + 1)
+
+    # a.balance = a.balance * (@@interest_rate + 1)
+
+    a.balance=(a.balance * (@@interest_rate + 1))
+
     end
   end
 
