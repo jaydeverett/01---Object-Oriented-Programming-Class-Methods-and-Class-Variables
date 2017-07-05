@@ -1,3 +1,6 @@
+#CAN'T DO THIS...NEED HELP
+
+
 class Zombie
 
   @@horde = []
